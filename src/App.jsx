@@ -1,47 +1,16 @@
-import './styles/App.css';
-import { CV } from './components/cv-container.jsx';
+import { UserInput } from './components/user-input.jsx';
+import { CV } from "./components/cv-container.jsx";
+import { useState } from "react";
+import "./styles/App.css";
 
-const jobTitles = [
-  {
-    title: "front end developer",
-    company: "facebook",
-    description: "designing and building website front ends",
-    from: "Jan 1st 2022",
-    to: "Aug 8th 2022", 
-  },
-  {
-    title: "back end developer",
-    company: "facebook",
-    description: "designing and building website back ends",
-    from: "Jan 1st 2023",
-    to: "Aug 8th 2023", 
-  },
-];
+export default function App() {
+  const [data, setData] = useState({});
 
-const edTitles = [
-  {
-    title: "Computer engineering",
-    university: "Harvard",
-    from: "Sep 3rd 2021",
-    to: "Aug 5th 2024",
-  },
-];
-
-const contactInfo = {
-  firstName: "Sina",
-  lastName: "Bayati",
-  telNumber: "1234567890",
-  emailAddress: "sinaBayati@gmail.com",
-}
-
-function App() {
   return (
-    <CV
-      contactInfo={contactInfo}
-      jobTitles={jobTitles}
-      edTitles={edTitles}
-    ></CV>    
-  )
+    <div id='app-container'>
+        <UserInput setData={setData}></UserInput>
+        <CV data={data}></CV>
+    </div>
+  );
 };
 
-export default App;

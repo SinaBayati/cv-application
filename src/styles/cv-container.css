@@ -1,0 +1,21 @@
+#cv-container{
+  --light-color: #fff;
+  --dark-color: #000;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 20px;
+  border: 2px solid black;
+  width: 100%;
+}
+
+button{
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+

@@ -1,8 +1,15 @@
-export function WorkXP({ jobTitles }) {
+export function WorkXP({ jobTitle, company, jobStart, jobEnd, description }) {
   return (
     <>
-      <h2>Work Experience</h2>
-      {jobTitles.map((job) => {
+      <h2 style={{borderBottom: "2px solid black"}}>Work Experience</h2>
+      <JobTitle
+        title={jobTitle}
+        company={company}
+        description={description}
+        from={jobStart}
+        to={jobEnd}
+      ></JobTitle>
+      {/* {jobTitles.map((job) => {
         return (
           <JobTitle
             key={crypto.randomUUID()}
@@ -14,7 +21,7 @@ export function WorkXP({ jobTitles }) {
           >
           </JobTitle>
         );
-      })}
+      })} */}
     </>
   );
 }
@@ -35,7 +42,7 @@ function JobTitle ({
         {description}
       </p>
       <p style={{marginBottom: "3rem"}}>
-        {`From ${from} to ${to}`}
+        {`${from} to ${to}`}
       </p>
     </>
   )

@@ -1,8 +1,14 @@
-export function Education({ edTitles }) {
+export function Education({ studyTitle, university, uniStart, uniEnd }) {
   return (
     <>
-      <h2>Education</h2>
-      {edTitles.map((ed) => {
+      <h2 style={{borderBottom: "2px solid black"}}>Education</h2>
+      <EdTitle 
+        title={studyTitle}
+        university={university}
+        from={uniStart}
+        to={uniEnd}
+      ></EdTitle>
+      {/* {edTitles.map((ed) => {
         return (
           <EdTitle
             key={crypto.randomUUID()}
@@ -13,7 +19,7 @@ export function Education({ edTitles }) {
           >
           </EdTitle>
         );
-      })}
+      })} */}
     </>
   );
 }
@@ -26,9 +32,8 @@ function EdTitle({
 }) {
   return (
     <>
-      <h3>{title}</h3>
-      <p>{"At " + university}</p>
-      <p>{`From ${from} to ${to}`}</p>
+      <h3>{`${title} at ${university}`}</h3>
+      <p>{`${from} to ${to}`}</p>
     </>
   );  
 }

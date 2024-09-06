@@ -1,12 +1,9 @@
-import "./../styles/h1.css";
-
 export function H1({ children }) {
   return (
     <>
-      <h1 className="header-1">
+      <h1 style={{color: "black", borderBottom: "3px solid black"}}>
         {children}
       </h1>
-      <div className="header-1"/>
     </>
   );
 }
