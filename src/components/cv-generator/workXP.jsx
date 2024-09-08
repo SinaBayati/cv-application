@@ -1,27 +1,20 @@
-export function WorkXP({ jobTitle, company, jobStart, jobEnd, description }) {
+export function WorkXP({ jobs }) {
   return (
     <>
       <h2 style={{borderBottom: "2px solid black"}}>Work Experience</h2>
-      <JobTitle
-        title={jobTitle}
-        company={company}
-        description={description}
-        from={jobStart}
-        to={jobEnd}
-      ></JobTitle>
-      {/* {jobTitles.map((job) => {
+      {jobs.map((job) => {
         return (
           <JobTitle
             key={crypto.randomUUID()}
             title={job.title}
             company={job.company}
             description={job.description}
-            from={job.from}
-            to={job.to}
+            start={job.start}
+            end={job.end}
           >
           </JobTitle>
         );
-      })} */}
+      })}
     </>
   );
 }
@@ -30,9 +23,16 @@ function JobTitle ({
   title,
   company,
   description,
-  from,
-  to,
+  start,
+  end,
 }) {
+
+  function formatDate(date) {
+    let newDate = date.split("-");
+    newDate = newDate.join("/");
+    return newDate;
+  }
+
   return (
     <>
       <h3>
@@ -42,7 +42,7 @@ function JobTitle ({
         {description}
       </p>
       <p style={{marginBottom: "3rem"}}>
-        {`${from} to ${to}`}
+        {`${formatDate(start)} to ${formatDate(end)}`}
       </p>
     </>
   )

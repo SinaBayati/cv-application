@@ -8,8 +8,8 @@ export function Education({ eds }) {
             key={crypto.randomUUID()}
             title={ed.title}
             university={ed.university}
-            from={ed.start}
-            to={ed.end}
+            start={ed.start}
+            end={ed.end}
           >
           </EdTitle>
         );
@@ -24,10 +24,17 @@ function EdTitle({
   start,
   end,
 }) {
+
+  function formatDate(date) {
+    let newDate = date.split("-");
+    newDate = newDate.join("/");
+    return newDate;
+  }
+  
   return (
     <>
       <h3>{`${title} at ${university}`}</h3>
-      <p>{`${start} to ${end}`}</p>
+      <p>{`${formatDate(start)} to ${formatDate(end)}`}</p>
     </>
   );  
 }

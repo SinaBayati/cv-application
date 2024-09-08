@@ -25,11 +25,14 @@ div.flex-wrapper{
     display: none;
   }
 
-  #user-input{
+  /* the "div" is added before the id to increase specificity
+  in order to override the rules defined in user-input.css */
+  div#user-input{
     display: none;
   }
 
-  #cv-container{
+  /* same thing here */
+  div#cv-container{
     border: none;
     width: 100%;
   }
