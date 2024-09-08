@@ -1,7 +1,9 @@
 import { ContactInput } from "./contact-input.jsx";
 import { JobInputs } from "./job-inputs.jsx";
-import './../styles/user-input.css';
 import { AddJobInput } from "./add-job-input.jsx";
+import { EdInputs } from "./ed-inputs.jsx";
+import { AddEdInput } from "./add-ed-input.jsx";
+import './../styles/user-input.css';
 
 export function UserInput({ 
   contact,
@@ -32,6 +34,17 @@ export function UserInput({
             jobs={jobs}
             setJobs={setJobs}
           ></AddJobInput>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <EdInputs
+            eds={eds}
+            setEds={setEds}
+          ></EdInputs>
+          <AddEdInput
+            eds={eds}
+            setEds={setEds}
+          ></AddEdInput>
         </div>
       </form>
     </div>

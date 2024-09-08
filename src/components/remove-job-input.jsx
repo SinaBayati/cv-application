@@ -11,7 +11,7 @@ export function RemoveJobInput({ jobs, setJobs, currentJobObj }) {
         type="button"
         onClick={removeJobHandler}
       >
-        Remove this section
+        Remove this field
       </button>
     </>
   );
