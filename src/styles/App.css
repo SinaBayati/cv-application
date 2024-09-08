@@ -2,6 +2,24 @@ body{
   background-color: #151820;
 }
 
+div.flex-wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#app-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#app-container > h2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
 @media print {
   button{
     display: none;
@@ -15,10 +33,8 @@ body{
     border: none;
     width: 100%;
   }
-}
 
-#app-container{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  #app-container > h2{
+    display: none;
+  }
 }

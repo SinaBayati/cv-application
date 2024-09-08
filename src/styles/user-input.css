@@ -1,4 +1,5 @@
 #user-input{
+  box-sizing: border-box;
   background-color: #151820;
   color: #ffffff;
   display: flex;
@@ -7,6 +8,8 @@
   min-width: 300px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border: 2px solid black;
+  height: 80vh;
+  overflow: auto;
 }
 
 h2{
@@ -31,16 +34,15 @@ label textarea{
   width: calc(100% - 10px);
 }
 
-button[type="submit"]{
+.button{
   border: none;
   padding: 10px 0;
   width: 100%;
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: #151820;
+  color: #fff;
+  border: 2px solid #000;
 }
 
-button[type="submit"]:hover{
-  background-color: #303649;
-  color: #fff;
+.button:hover{
+  background-color: #262b3a;
 }
